@@ -63,7 +63,7 @@ npm (usually comes with Node.js)
 Installation
 Clone the repository:
 
-git clone [https://github.com/your-username/bike-service-booking.git](https://github.com/your-username/bike-service-booking.git)
+git clone https://github.com/Tomgit473/Bike-Service/
 cd bike-service-booking
 
 Install dependencies:
