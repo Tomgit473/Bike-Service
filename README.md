@@ -65,14 +65,13 @@ Follow these steps to set up the project locally.
 
 ### 🧩 Installation
 
-\`\`\`bash
 # Clone the repository
-git clone https://github.com/Tomgit473/Bike-Service.git
+git clone https://github.com/Tomgit473/Bike-Service.git                                                                                      
 cd bike-service-booking
 
 # Install dependencies
-npm install
-\`\`\`
+
+npm i
 
 ---
 
@@ -88,7 +87,7 @@ npm install
    \`\`\`
 3. Obtain your **API URL**, **anon key**, and **SERVICE_ROLE_KEY** from the **Supabase settings**.  
 4. Create a `.env` file in the root directory and add:
-   \`\`\`bash
+   \`\`\`
    VITE_SUPABASE_URL=your_supabase_url
    VITE_SUPABASE_ANON_KEY=your_anon_key
    VITE_SERVICE_ROLE_KEY=your_service_role_key
@@ -98,7 +97,7 @@ npm install
 
 ### ▶️ Running the App
 
-\`\`\`bash
+\`\`\`
 npm run dev
 \`\`\`
 
@@ -108,22 +107,22 @@ Visit **http://localhost:3000** to access the app.
 
 ## 📁 Project Structure
 
-\`\`\`
-/
-├── public/
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── data/           # Mock data for services, mechanics, etc.
-│   ├── pages/          # Application routes
-│   ├── supabase/       # Supabase function configs
-│   ├── styles/         # Global CSS
-│   ├── utils/          # Helper functions and configs
-│   ├── App.tsx         # Main application entry
-│   └── main.tsx        # Vite entry file
-├── .env.example         # Example environment variables
-├── package.json         # Dependencies and scripts
-└── vite.config.ts       # Build configuration
-\`\`\`
+
+    /
+    ├── public/
+    ├── src/
+    │   ├── components/     # Reusable UI components
+    │   ├── data/           # Mock data for services, mechanics, etc.
+    │   ├── pages/          # Application routes
+    │   ├── supabase/       # Supabase function configs
+    │   ├── styles/         # Global CSS
+    │   ├── utils/          # Helper functions and configs
+    │   ├── App.tsx         # Main application entry
+    │   └── main.tsx        # Vite entry file
+    ├── .env.example         # Example environment variables
+    ├── package.json         # Dependencies and scripts
+    └── vite.config.ts       # Build configuration
+
 
 ---
 
