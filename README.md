@@ -28,21 +28,10 @@ This platform connects customers with service centers for **seamless appointment
 
 ## ✨ Features
 
-### 👤 **Customer Features**
 - 🧾 **Browse Services:** View a complete list of available bike services.  
 - 📅 **Easy Booking:** Book appointments by selecting service type, date, time, location, and mechanic.  
 - ⚡ **Real-Time Availability:** Instantly view available time slots.  
-- 📧 **Email Confirmation:** Receive automatic confirmation upon booking.  
-
-### 🔧 **Mechanic Features**
-- 🧰 **Mechanic Dashboard:** View assigned bookings in one place.  
-- 🔄 **Status Updates:** Change service progress (Pending → In-Progress → Completed).  
-- 🧩 **Service Details:** Add notes about parts used and finalize reports.  
-
-### 💰 **Cashier Features**
-- 💼 **Cashier Dashboard:** View completed services awaiting payment.  
-- 💳 **Payment Processing:** Handle transactions (Cash, Card, or Online).  
-- 🪪 **Gate Pass Generation:** Generate passes after successful payment.  
+- 📧 **Email Confirmation:** Receive automatic confirmation upon booking.    
 
 ---
 
