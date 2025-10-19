@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { RadioGroup, RadioGroupItem } from "../components/ui/radio-group";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Calendar } from "../components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "../components/ui/popover";
 import { CalendarIcon, X } from "lucide-react";
 import { format } from "date-fns";
-import { services, showrooms, mechanics, timeSlots } from "@/data/mockData";
+import { services, showrooms, mechanics, timeSlots } from "../data/mockData";
 import { toast } from "sonner";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "../components/ui/checkbox";
+import { Badge } from "../components/ui/badge";
 
 // Securely get credentials from environment variables
 const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
