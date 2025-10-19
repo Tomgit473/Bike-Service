@@ -15,6 +15,12 @@ import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 
+// Securely get credentials from environment variables
+const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+const publicAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const apiBaseUrl = `https://${projectId}.supabase.co/functions/v1/make-server-823312a1`;
+
+
 export function BookingPage() {
   const [searchParams] = useSearchParams();
   const serviceId = searchParams.get("service");
@@ -52,13 +58,12 @@ export function BookingPage() {
 
       setIsLoadingSlots(true);
       try {
-        const { projectId, publicAnonKey } = await import("../utils/supabase/info");
         const formattedDate = format(date, "PPP");
         const selectedShowroom = showrooms.find(s => s.id === location);
         const selectedMechanic = availableMechanics.find(m => m.id === mechanic);
         
         const response = await fetch(
-          `https://${projectId}.supabase.co/functions/v1/make-server-823312a1/bookings/availability?date=${encodeURIComponent(formattedDate)}&location=${encodeURIComponent(selectedShowroom?.name || "")}&mechanic=${encodeURIComponent(selectedMechanic?.name || "")}`,
+          `${apiBaseUrl}/bookings/availability?date=${encodeURIComponent(formattedDate)}&location=${encodeURIComponent(selectedShowroom?.name || "")}&mechanic=${encodeURIComponent(selectedMechanic?.name || "")}`,
           {
             headers: {
               "Authorization": `Bearer ${publicAnonKey}`,
@@ -129,10 +134,8 @@ export function BookingPage() {
     };
 
     try {
-      const { projectId, publicAnonKey } = await import("../utils/supabase/info");
-      
       const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-823312a1/bookings`,
+        `${apiBaseUrl}/bookings`,
         {
           method: "POST",
           headers: {
@@ -270,7 +273,7 @@ export function BookingPage() {
                           id="phone"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="+91 9876543210"
+                          placeholder="e.g., 9876543210"
                           required
                         />
                       </div>
@@ -280,7 +283,7 @@ export function BookingPage() {
                           id="bikeNumber"
                           value={bikeNumber}
                           onChange={(e) => setBikeNumber(e.target.value)}
-                          placeholder="MH 15 AB 1234"
+                          placeholder="e.g., MH 15 AB 1234"
                           required
                         />
                       </div>
